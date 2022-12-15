@@ -1,0 +1,16 @@
+.slider-card {
+  margin: 30px auto;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  width: 600px;
+}
+
+@media screen and (max-width: 630px) {
+  .slider-card {
+    position: relative;
+    width: auto;
+  }
+}

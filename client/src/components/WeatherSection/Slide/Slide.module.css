@@ -1,0 +1,291 @@
+.slide-details {
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 300px;
+  width: 450px;
+  color: #fff;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  margin: auto;
+}
+
+/* slide image positioning */
+
+.slide-details img {
+  position: relative;
+}
+
+.slide-details img.temp {
+  right: 50px;
+}
+.slide-details img.sun {
+  right: 50px;
+}
+
+.slide-details img.wind {
+  top: -20px;
+}
+
+.slide-details img.wind-direction {
+  top: -15px;
+}
+
+.slide-details img.pressure {
+  left: -40px;
+  top: -10px;
+}
+
+.slide-details img.humidity {
+  top: -10px;
+  right: 50px;
+}
+
+/* slide data positioning */
+
+.slide-data {
+  position: absolute;
+  text-shadow: none;
+  font-weight: 900;
+}
+
+.slide-data.description {
+  font-size: 35px;
+  width: 100%;
+  position: relative;
+}
+
+.slide-data.temp {
+  font-size: 80px;
+  right: 50px;
+  top: 75px;
+}
+
+.slide-data .feelsLike {
+  font-size: 20px;
+}
+
+.slide-data.sun {
+  font-size: 40px;
+  right: -25px;
+}
+
+.slide-data.wind {
+  font-size: 40px;
+  right: -20px;
+}
+
+.slide-data.wind-direction {
+  font-size: 55px;
+  right: 25px;
+  top: 90px;
+}
+
+.slide-data.pressure {
+  font-size: 40px;
+  right: -30px;
+}
+
+.slide-data.humidity {
+  font-size: 50px;
+  right: 50px;
+}
+
+/* slide title positioning */
+
+.slide-title {
+  position: absolute;
+  color: #fff;
+  font-weight: 900;
+}
+
+.slide-data.description {
+  width: 50%;
+}
+
+.slide-title.sun {
+  font-size: 30px;
+  bottom: 25px;
+  left: 10px;
+}
+
+.slide-title.wind {
+  font-size: 30px;
+  bottom: 40px;
+  left: 60px;
+}
+
+.slide-title.wind-direction {
+  font-size: 27px;
+  bottom: 25px;
+  left: 50px;
+}
+
+.slide-title.pressure {
+  font-size: 30px;
+  bottom: 20px;
+  left: 50px;
+}
+
+.slide-title.humidity {
+  font-size: 30px;
+  bottom: 20px;
+  left: 65px;
+}
+
+@media screen and (max-width: 600px) {
+  /* arranging the slide image, data & title into a column */
+
+  .slide-details {
+    flex-direction: column;
+    width: auto;
+  }
+
+  /* resetting the positioning of slide images and
+     width to only 250px (except for temperature) */
+
+  .slide-details img {
+    width: 250px;
+    padding: 0px;
+  }
+
+  .slide-details img.description {
+    top: initial;
+    margin: initial;
+  }
+
+  .slide-details img.sun {
+    right: initial;
+  }
+
+  .slide-details img.wind {
+    top: initial;
+  }
+
+  .slide-details img.wind-direction {
+    top: initial;
+  }
+
+  .slide-details img.pressure {
+    left: initial;
+    top: initial;
+  }
+
+  .slide-details img.humidity {
+    top: initial;
+    right: initial;
+  }
+
+  .slide-details img.temp {
+    width: 350px;
+    right: 100px;
+    bottom: 15px;
+  }
+
+  /* resetting the positioning of slide data then translating down to 40px and 
+     setting the font-size to 25px (except for description & temperature) */
+
+  .slide-data {
+    position: relative;
+    order: 3;
+    transform: translate(0, -40px);
+  }
+
+  .slide-data.sun {
+    font-size: 25px;
+    right: initial;
+    bottom: 0px;
+  }
+
+  .slide-data.wind {
+    font-size: 25px;
+    right: initial;
+  }
+
+  .slide-data.wind-direction {
+    font-size: 25px;
+    right: initial;
+    top: initial;
+  }
+
+  .slide-data.pressure {
+    font-size: 25px;
+    right: initial;
+  }
+
+  .slide-data.humidity {
+    font-size: 25px;
+    right: initial;
+  }
+
+  .slide-data.description {
+    font-size: 25px;
+    bottom: initial;
+    display: block;
+    position: relative;
+    transform: translate(0, 0);
+    width: 100%;
+  }
+
+  .slide-data.temp {
+    font-size: 80px;
+    top: -225px;
+    left: 75px;
+  }
+
+  /* resetting the positioning of slide title, translating all titles to -40px 
+     and setting the font-size to 25px */
+
+  .slide-title {
+    position: relative;
+    margin-bottom: 0px;
+    transform: translate(0, -40px);
+  }
+
+  .slide-title.sun {
+    bottom: initial;
+    left: initial;
+    font-size: 25px;
+  }
+
+  .slide-title.wind {
+    bottom: initial;
+    left: initial;
+    font-size: 25px;
+  }
+
+  .slide-title.wind-direction {
+    bottom: initial;
+    left: initial;
+    font-size: 25px;
+  }
+
+  .slide-title.pressure {
+    bottom: initial;
+    left: initial;
+    font-size: 25px;
+  }
+
+  .slide-title.humidity {
+    bottom: initial;
+    left: initial;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  /* resizing & repositioning of the image and data for temperature */
+  .slide-details img.temp {
+    width: 275px;
+    right: initial;
+    bottom: 25px;
+  }
+
+  .slide-data.temp {
+    font-size: 40px;
+    top: initial;
+    left: initial;
+    bottom: 40px;
+    right: 0px;
+  }
+}
