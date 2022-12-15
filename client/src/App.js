@@ -29,8 +29,6 @@ function App() {
 
       const data = await response.data;
 
-      console.log(data);
-
       if (data.errorCode) {
         setError(data);
       }
