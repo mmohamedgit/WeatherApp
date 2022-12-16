@@ -1,7 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-// const cors = require("cors");
-const path = require("path");
 const axios = require("axios");
 require("dotenv").config();
 
@@ -9,7 +7,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use("/api", (req, res, next) => {
+app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
     "Access-Control-Allow-Headers",
@@ -21,11 +19,6 @@ app.use("/api", (req, res, next) => {
   );
   next();
 });
-
-// app.use(express.static("public"));
-// app.get("./api", (req, res) => {
-//   res.sendFile("index.html", { root: path.join(__dirname, "public") });
-// });
 
 app.post("/api/selectedCity", (req, res, next) => {
   const city = req.body.city; //this is parsing the cityName data from the browser input to our server

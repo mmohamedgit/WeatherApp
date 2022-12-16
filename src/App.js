@@ -37,7 +37,7 @@ function App() {
       setCurrentWeatherData(weatherdata);
     } catch (error) {
       setError(error.response);
-      console.log(error);
+      // console.log(error);
     }
     setIsLoading(false);
   }
@@ -91,17 +91,17 @@ function App() {
             });
 
             const data = await response.data;
-            console.log(data);
+            // console.log(data);
             if (data.errorCode) {
               setError(data);
-              console.log(error);
+              // console.log(error);
             }
             const weatherdata = [];
             weatherdata.push(data);
             setCurrentWeatherData(weatherdata);
           } catch (error) {
             setError(error.response);
-            console.log(error);
+            // console.log(error);
           }
         }
       }

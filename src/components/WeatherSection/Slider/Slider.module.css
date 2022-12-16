@@ -34,13 +34,13 @@
 @media screen and (max-width: 750px) {
   .right-arrow {
     position: absolute;
-    bottom: 125px;
+    bottom: 165px;
     right: 10%;
   }
 
   .left-arrow {
     position: absolute;
-    bottom: 125px;
+    bottom: 165px;
     left: 10%;
   }
 }

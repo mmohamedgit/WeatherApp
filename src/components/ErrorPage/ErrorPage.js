@@ -7,9 +7,14 @@ const ErrorPage = (props) => {
       {/* <p>{props.errorCode} Error</p> */}
       <FaSadTear size="200px" />
       <p className={classes["error-message"]}>
-        {props.errorMessage === "city not found"
-          ? "City not found! Please try again."
-          : props.errorMessage}
+        {props.errorMessage === "city not found" ? (
+          <div>
+            <p className={classes["not-found"]}>City not found!</p>
+            <p>Please try again.</p>
+          </div>
+        ) : (
+          props.errorMessage
+        )}
       </p>
       <p>{props.statusCode}</p>
       <p className={classes["status-message"]}>{props.statusText}</p>

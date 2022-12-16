@@ -1,6 +1,5 @@
 footer {
   background-color: rgb(42, 42, 46);
-  margin-top: 20px;
 }
 
 .footer-container {
@@ -48,5 +47,11 @@ footer {
 @media screen and (max-width: 750px) {
   .footer-container {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  footer {
+    margin-top: 12px;
   }
 }
