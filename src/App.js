@@ -22,7 +22,7 @@ function App() {
     setError(null);
     setLocationError(null);
     try {
-      const response = await axios.post("/selectedCity", {
+      const response = await axios.post("/api/selectedCity", {
         city: city,
         headers: { "Content-Type": "application/json" },
       });
