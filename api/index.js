@@ -1,4 +1,4 @@
-const express = require("express")();
+const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
@@ -6,31 +6,32 @@ const axios = require("axios");
 require("dotenv").config();
 
 const app = express();
+
 app.use(bodyParser.json());
 
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "*");
-//   res.setHeader(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-//   );
-//   res.setHeader(
-//     "Access-Control-Allow-Methods",
-//     "GET, POST, PATCH, DELETE, OPTIONS"
-//   );
-//   next();
-// });
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PATCH, DELETE, OPTIONS"
+  );
+  next();
+});
 
 // app.use(express.static("public"));
 // app.get("./api", (req, res) => {
-//   res.sendFile("index.html", { root: path.join(__dirname, "./client/public") });
+//   res.sendFile("index.html", { root: path.join(__dirname, "./clpublic") });
 // });
 
-// app.get("/api", (req, res) => {
-//   res.setHeader("Content-Type", "text/html");
-//   res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-//   res.sendFile(path.join(__dirname, "/api/build/index.html"));
-// });
+app.get("/api", (req, res) => {
+  res.setHeader("Content-Type", "text/html");
+  res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+  res.sendFile(path.join(__dirname, "/api/build/index.html"));
+});
 
 app.post("/selectedCity", (req, res, next) => {
   const city = req.body.city; //this is parsing the cityName data from the browser input to our server
