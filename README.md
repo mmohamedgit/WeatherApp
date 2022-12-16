@@ -9,3 +9,5 @@ The weather data is provided by OpenWeatherMap. You can use your own API key in 
 https://openweathermap.org/current
 
 ![Alt Text](https://gyazo.com/cdfb2b9250189cf79530a7c020840ca3.gif)
+
+<img src="https://gyazo.com/cdfb2b9250189cf79530a7c020840ca3.gif" width="100" >
