@@ -85,7 +85,7 @@ function App() {
         if (coordinates.latitude !== "" || coordinates.longitude !== "") {
           setLocationError(null);
           try {
-            const response = await axios.post("/selectedCity", {
+            const response = await axios.post("/api/selectedCity", {
               coordinates,
               headers: { "Content-Type": "application/json" },
             });

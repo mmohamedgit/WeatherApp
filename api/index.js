@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const cors = require("cors");
+// const cors = require("cors");
 const path = require("path");
 const axios = require("axios");
 require("dotenv").config();
@@ -9,7 +9,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use((req, res, next) => {
+app.use("/api", (req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
     "Access-Control-Allow-Headers",
@@ -24,16 +24,10 @@ app.use((req, res, next) => {
 
 // app.use(express.static("public"));
 // app.get("./api", (req, res) => {
-//   res.sendFile("index.html", { root: path.join(__dirname, "./clpublic") });
+//   res.sendFile("index.html", { root: path.join(__dirname, "public") });
 // });
 
-app.get("/api", (req, res) => {
-  res.setHeader("Content-Type", "text/html");
-  res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-  res.sendFile(path.join(__dirname, "/api/build/index.html"));
-});
-
-app.post("/selectedCity", (req, res, next) => {
+app.post("/api/selectedCity", (req, res, next) => {
   const city = req.body.city; //this is parsing the cityName data from the browser input to our server
   const apiKey = process.env.API_KEY;
   const units = "metric";
@@ -241,4 +235,4 @@ app.listen(5000, () => {
   console.log("Server started on port 5000");
 });
 
-module.exports = app;
+// module.exports = app;
