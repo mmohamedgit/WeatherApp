@@ -1,7 +1,7 @@
 {
-  "name": "server",
+  "name": "api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Weather App Project",
   "engines": {
     "node": "18.x"
   },
