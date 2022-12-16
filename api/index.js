@@ -20,9 +20,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, "build")));
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
+app.get("/api", (req, res) => {
+  res.setHeader("Content-Type", "text/html");
+  res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
 });
 
 app.post("/selectedCity", (req, res, next) => {
