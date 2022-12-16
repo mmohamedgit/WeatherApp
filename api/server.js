@@ -208,8 +208,7 @@ app.post("/selectedCity", (req, res, next) => {
       console.log(weatherData);
       res.send(weatherData);
     } catch (error) {
-      //maybe send the whole error object and parse it on the client for its key values
-      const errorResponse = error.response; //--> would need to solve on how to send this object to the client
+      const errorResponse = error.response;
       const errorCode = errorResponse.data.cod;
       const errorMessage = errorResponse.data.message;
 
