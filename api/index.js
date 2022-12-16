@@ -20,10 +20,15 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(express.static("public"));
+app.get("/", (req, res) => {
+  res.sendFile("index.html", { root: path.join(__dirname, "public") });
+});
+
 app.get("/api", (req, res) => {
   res.setHeader("Content-Type", "text/html");
   res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-  res.sendFile(path.join(__dirname, "/build/index.html"));
+  res.sendFile(path.join(__dirname, "/api/build/index.html"));
 });
 
 app.post("/selectedCity", (req, res, next) => {
@@ -233,3 +238,5 @@ app.post("/selectedCity", (req, res, next) => {
 app.listen(5000, () => {
   console.log("Server started on port 5000");
 });
+
+module.exports = app;
