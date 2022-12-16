@@ -5,7 +5,7 @@ const Spinner = () => {
   return (
     <div className={classes.spinner}>
       <BeatLoader color="yellow" />
-      <p>Loading Weather Data...</p>
+      <p className={classes["loading-text"]}>Loading Weather Data...</p>
     </div>
   );
 };

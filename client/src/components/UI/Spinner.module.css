@@ -1,7 +1,13 @@
 .spinner {
-  margin: 200px auto;
+  position: relative;
+  margin: auto;
   text-align: center;
   color: #fff;
   font-size: 20px;
   font-weight: bold;
+  top: 225px;
+}
+
+.loading-text {
+  margin-top: 10px;
 }
