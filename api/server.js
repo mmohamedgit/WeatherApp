@@ -20,6 +20,11 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(express.static(path.join(__dirname, "build")));
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
 app.post("/selectedCity", (req, res, next) => {
   const city = req.body.city; //this is parsing the cityName data from the browser input to our server
   const apiKey = process.env.API_KEY;
