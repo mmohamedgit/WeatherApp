@@ -10,6 +10,6 @@ Here is the API reference for fetching the weather data: https://openweathermap.
 
 The app is hosted at Vercel: https://weather-app-lake.vercel.app/
 
-<ins>**Snapshot**</ins>
+**Snapshot**
 
 <img src="https://gyazo.com/cdfb2b9250189cf79530a7c020840ca3.gif" width="600" >
