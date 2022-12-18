@@ -12,4 +12,4 @@ The app is hosted at Vercel: https://weather-app-lake.vercel.app/
 
 **Snapshot**
 
-<img src="https://gyazo.com/cdfb2b9250189cf79530a7c020840ca3.gif" width="600" >
+<img src="https://gyazo.com/cdfb2b9250189cf79530a7c020840ca3.gif" width="500" >
