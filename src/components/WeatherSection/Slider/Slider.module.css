@@ -14,7 +14,7 @@
   bottom: 50%;
   right: -575px;
   font-size: 3rem;
-  color: #000;
+  color: #fff;
   z-index: 10;
   cursor: pointer;
   user-select: none;
@@ -25,10 +25,19 @@
   bottom: 50%;
   right: 70px;
   font-size: 3rem;
-  color: #000;
+  color: #fff;
   z-index: 10;
   cursor: pointer;
   user-select: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .right-arrow:hover {
+    color: yellow;
+  }
+  .left-arrow:hover {
+    color: yellow;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -47,13 +56,13 @@
 @media screen and (max-width: 630px) {
   .right-arrow {
     position: absolute;
-    bottom: -60px;
+    bottom: -70px;
     right: 10%;
   }
 
   .left-arrow {
     position: absolute;
-    bottom: -60px;
+    bottom: -70px;
     left: 10%;
   }
 }
@@ -61,13 +70,13 @@
 @media screen and (max-width: 300px) {
   .right-arrow {
     position: absolute;
-    bottom: -60px;
+    bottom: -65px;
     right: 10%;
   }
 
   .left-arrow {
     position: absolute;
-    bottom: -60px;
+    bottom: -65px;
     left: 10%;
   }
 }
